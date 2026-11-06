@@ -1,1 +1,281 @@
 
+            :root {
+                --color-bg: #fafafa;
+                --color-bg-nota: hsl(30, 5%, 85%);
+                --color-text: rgb(60, 60, 60);
+                --color-text-dark: rgb(30, 30, 30);
+                --color-text-light: rgba(90, 90, 90, 1);
+                --color-border: silver;
+                --font-sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: var(--font-serif);
+                color: var(--color-text);
+                background: var(--color-bg);
+                margin: 0 auto;
+                padding: 1.5rem;
+                line-height: 1.6;
+                font-size: 1.2rem;
+            }
+
+            a {
+                color: var(--color-text-dark);
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-underline-offset: 3px;
+                transition: all ease 0.5s;
+            }
+
+            a:hover {
+                text-decoration-style: solid;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            em {
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            abbr {
+                font-size: 90%;
+                text-decoration: none;
+                cursor: help;
+            }
+
+            ul,
+            ol {
+                list-style-position: inside;
+            }
+
+            ul li,
+            ol li {
+                margin-bottom: 0.5rem;
+            }
+
+            .container {
+                margin: 0 auto;
+                width: 90%;
+                max-width: 700px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: var(--font-sans);
+                line-height: 1.2;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-weight: 700;
+            }
+
+            h5,
+            h6 {
+                font-weight: 400;
+                text-align: center;
+                color: var(--color-text-light);
+            }
+
+            h1 {
+                font-size: calc(1.5rem + 2.5vw);
+                text-align: center;
+                margin-top: 10vh;
+            }
+
+            h1:before {
+                content: "";
+                display: block;
+                width: calc(1.5rem + 5vw);
+                height: calc(1.5rem + 5vw);
+                margin: 0 auto 1rem auto;
+                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg>');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            h2 {
+                font-size: calc(1.25rem + 1.25vw);
+                text-align: center;
+                margin-bottom: 5vh;
+            }
+
+            h3 {
+                font-size: calc(1rem + 0.75vw);
+                margin: 2rem 0 0.5rem 0;
+                line-height: 1;
+                color: dimgray;
+            }
+
+            h3#universidades,
+            h3#escuelas,
+            h3#intercambios {
+                text-indent: calc(1rem + 1vw);
+                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dimgray" class="bi bi-globe-americas" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg>');
+                background-repeat: no-repeat;
+                background-size: calc(1rem + 0.5vw);
+            }
+
+            h4 {
+                font-size: calc(1rem + 0.25vw);
+                margin: 1.25rem 0 0.75rem 0;
+                line-height: 1;
+            }
+
+            h5 {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+
+            h5 a {
+                font-weight: 600;
+                color: var(--color-text-dark);
+                text-decoration: none;
+            }
+
+            h5 a:hover {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+            }
+
+            h6 {
+                font-size: 0.8rem;
+                margin-bottom: 3rem;
+                letter-spacing: 0.01rem;
+            }
+
+            hr{
+                margin-top:2rem;
+                border:2px solid #ddd;
+            }
+
+            div.container > p:nth-child(1) {
+                font-size: 120%;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: calc(100% + 1.5rem);
+                margin: 0 -0.75rem 2.5rem -0.75rem;
+                font-family: var(--font-sans);
+                font-size: 85%;
+                font-weight: 300;
+            }
+
+            tr,
+            tr:hover {
+                transition: background ease 0.4s;
+            }
+
+            tbody tr:hover {
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            th {
+                text-align: left;
+                font-family: var(--font-sans);
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 90%;
+                font-weight: 600;
+            }
+
+            th,
+            td {
+                border-bottom: 1px solid var(--color-border);
+                padding: 0.4rem 0.8rem;
+            }
+
+            table th:nth-child(1),
+            table td:nth-child(1) {
+                text-align: center;
+                padding: 0.4rem 0.2rem;
+            }
+
+            table:first-of-type th:nth-child(3), table:first-of-type th:nth-child(4), table:first-of-type td:nth-child(3), table:first-of-type td:nth-child(4){
+                text-align: center;
+            }
+
+            td span {
+                font-size: 90%;
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            /* --- Otros elementos --- */
+            object {
+                display: block;
+                margin: 1rem -1rem;
+                width: calc(100% + 2rem);
+                height: auto;
+                aspect-ratio: 880 / 580; /* debe coincidir con el viewBox de viz.svg */
+            }
+
+            svg.grafico {
+                display: block;
+                margin: 1rem -1rem 3rem -1rem;
+                width: calc(100% + 2rem);
+                height: auto;
+                aspect-ratio: 880 / 580;
+            }
+
+            canvas {
+                margin-bottom: 3rem;
+                margin-right: 1rem;
+            }
+
+            .nota {
+                background: var(--color-bg-nota);
+                border-left: 3px solid var(--color-border);
+                padding: 0.7rem 0.5rem;
+                padding-left: 0.75rem;
+                font-size: 0.95rem;
+                margin: 2rem -0.5rem;
+                line-height: 1.3;
+            }
+
+            .nota span {
+                font-weight: 700;
+            }
+
+            dl {
+                font-family: var(--font-sans);
+                font-size: 80%;
+                letter-spacing: 0.025rem;
+                margin-bottom: 10vh;
+            }
+
+            dl dt {
+                font-weight: 700;
+            }
+
+            dl dd {
+                font-size: 90%;
+                color: var(--color-text-light);
+                margin-top: 0.25rem;
+            }
+
+            dl dd em {
+                font-style: normal;
+                font-weight: 700;
+                color: var(--color-text-light);
+            }
+
+     
