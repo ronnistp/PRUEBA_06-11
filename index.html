@@ -7,287 +7,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"/>
-        <style>
-            :root {
-                --color-bg: #fafafa;
-                --color-bg-nota: hsl(30, 5%, 85%);
-                --color-text: rgb(60, 60, 60);
-                --color-text-dark: rgb(30, 30, 30);
-                --color-text-light: rgba(90, 90, 90, 1);
-                --color-border: silver;
-                --font-sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
-            }
-
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                font-family: var(--font-serif);
-                color: var(--color-text);
-                background: var(--color-bg);
-                margin: 0 auto;
-                padding: 1.5rem;
-                line-height: 1.6;
-                font-size: 1.2rem;
-            }
-
-            a {
-                color: var(--color-text-dark);
-                text-decoration: underline;
-                text-decoration-style: dotted;
-                text-underline-offset: 3px;
-                transition: all ease 0.5s;
-            }
-
-            a:hover {
-                text-decoration-style: solid;
-            }
-
-            p {
-                margin-bottom: 1rem;
-            }
-
-            em {
-                font-weight: 600;
-                font-style: normal;
-            }
-
-            abbr {
-                font-size: 90%;
-                text-decoration: none;
-                cursor: help;
-            }
-
-            ul,
-            ol {
-                list-style-position: inside;
-            }
-
-            ul li,
-            ol li {
-                margin-bottom: 0.5rem;
-            }
-
-            .container {
-                margin: 0 auto;
-                width: 90%;
-                max-width: 700px;
-            }
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                font-family: var(--font-sans);
-                line-height: 1.2;
-            }
-
-            h1,
-            h2,
-            h3,
-            h4 {
-                font-weight: 700;
-            }
-
-            h5,
-            h6 {
-                font-weight: 400;
-                text-align: center;
-                color: var(--color-text-light);
-            }
-
-            h1 {
-                font-size: calc(1.5rem + 2.5vw);
-                text-align: center;
-                margin-top: 10vh;
-            }
-
-            h1:before {
-                content: "";
-                display: block;
-                width: calc(1.5rem + 5vw);
-                height: calc(1.5rem + 5vw);
-                margin: 0 auto 1rem auto;
-                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg>');
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
-
-            h2 {
-                font-size: calc(1.25rem + 1.25vw);
-                text-align: center;
-                margin-bottom: 5vh;
-            }
-
-            h3 {
-                font-size: calc(1rem + 0.75vw);
-                margin: 2rem 0 0.5rem 0;
-                line-height: 1;
-                color: dimgray;
-            }
-
-            h3#universidades,
-            h3#escuelas,
-            h3#intercambios {
-                text-indent: calc(1rem + 1vw);
-                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dimgray" class="bi bi-globe-americas" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/></svg>');
-                background-repeat: no-repeat;
-                background-size: calc(1rem + 0.5vw);
-            }
-
-            h4 {
-                font-size: calc(1rem + 0.25vw);
-                margin: 1.25rem 0 0.75rem 0;
-                line-height: 1;
-            }
-
-            h5 {
-                font-size: 0.9rem;
-                margin-bottom: 0.5rem;
-            }
-
-            h5 a {
-                font-weight: 600;
-                color: var(--color-text-dark);
-                text-decoration: none;
-            }
-
-            h5 a:hover {
-                text-decoration: underline;
-                text-decoration-style: dotted;
-            }
-
-            h6 {
-                font-size: 0.8rem;
-                margin-bottom: 3rem;
-                letter-spacing: 0.01rem;
-            }
-
-            hr{
-                margin-top:2rem;
-                border:2px solid #ddd;
-            }
-
-            div.container > p:nth-child(1) {
-                font-size: 120%;
-            }
-
-            table {
-                border-collapse: collapse;
-                width: calc(100% + 1.5rem);
-                margin: 0 -0.75rem 2.5rem -0.75rem;
-                font-family: var(--font-sans);
-                font-size: 85%;
-                font-weight: 300;
-            }
-
-            tr,
-            tr:hover {
-                transition: background ease 0.4s;
-            }
-
-            tbody tr:hover {
-                background: rgba(255, 255, 255, 0.5);
-            }
-
-            th {
-                text-align: left;
-                font-family: var(--font-sans);
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                font-size: 90%;
-                font-weight: 600;
-            }
-
-            th,
-            td {
-                border-bottom: 1px solid var(--color-border);
-                padding: 0.4rem 0.8rem;
-            }
-
-            table th:nth-child(1),
-            table td:nth-child(1) {
-                text-align: center;
-                padding: 0.4rem 0.2rem;
-            }
-
-            table:first-of-type th:nth-child(3), table:first-of-type th:nth-child(4), table:first-of-type td:nth-child(3), table:first-of-type td:nth-child(4){
-                text-align: center;
-            }
-
-            td span {
-                font-size: 90%;
-                color: rgba(0, 0, 0, 0.5);
-            }
-
-            /* --- Otros elementos --- */
-            object {
-                display: block;
-                margin: 1rem -1rem;
-                width: calc(100% + 2rem);
-                height: auto;
-                aspect-ratio: 880 / 580; /* debe coincidir con el viewBox de viz.svg */
-            }
-
-            svg.grafico {
-                display: block;
-                margin: 1rem -1rem 3rem -1rem;
-                width: calc(100% + 2rem);
-                height: auto;
-                aspect-ratio: 880 / 580;
-            }
-
-            canvas {
-                margin-bottom: 3rem;
-                margin-right: 1rem;
-            }
-
-            .nota {
-                background: var(--color-bg-nota);
-                border-left: 3px solid var(--color-border);
-                padding: 0.7rem 0.5rem;
-                padding-left: 0.75rem;
-                font-size: 0.95rem;
-                margin: 2rem -0.5rem;
-                line-height: 1.3;
-            }
-
-            .nota span {
-                font-weight: 700;
-            }
-
-            dl {
-                font-family: var(--font-sans);
-                font-size: 80%;
-                letter-spacing: 0.025rem;
-                margin-bottom: 10vh;
-            }
-
-            dl dt {
-                font-weight: 700;
-            }
-
-            dl dd {
-                font-size: 90%;
-                color: var(--color-text-light);
-                margin-top: 0.25rem;
-            }
-
-            dl dd em {
-                font-style: normal;
-                font-weight: 700;
-                color: var(--color-text-light);
-            }
-
-        </style>
+        
+         <link href="style.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -347,104 +68,104 @@
                     <tr>
                         <th scope="row">119</th>
                         <td>Pontificia Universidad Católica de Chile (<abbr>PUC</abbr>)</td>
-                        <td>✓</td>
-                        <td>✓</td>
+                        <td>🟢</td>
+                        <td>🟢</td>
                     </tr>
                     <tr>
                         <th scope="row">185</th>
                         <td>Universidad de Chile (<abbr>UCh</abbr>)</td>
-                        <td>✓</td>
-                        <td>✓</td>
+                        <td>🟢</td>
+                        <td>🟢</td>
                     </tr>
                     <tr>
                         <th scope="row">551</th>
                         <td>Universidad de Santiago de Chile (<abbr>USACH</abbr>)</td>
-                        <td>✓</td>
-                        <td>✗</td>
+                        <td>🟢</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">655</th>
                         <td>Universidad de Concepción</td>
-                        <td>✗</td>
-                        <td>✗</td>
+                        <td>❌</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">662</th>
                         <td>Universidad Adolfo Ibáñez (<abbr>UAI</abbr>)</td>
-                        <td>✓</td>
-                        <td>✗</td>
+                        <td>🟢</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">851-900</th>
                         <td>Pontificia Universidad Católica de Valparaíso (<abbr>PUCV</abbr>)</td>
-                        <td>✓</td>
-                        <td>✓</td>
+                        <td>🟢</td>
+                        <td>🟢</td>
                     </tr>
                     <tr>
                         <th scope="row">901-950</th>
                         <td>Universidad de los Andes</td>
-                        <td>✗</td>
-                        <td>✗</td>
+                        <td>❌</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">1001-1200</th>
                         <td>Universidad Andrés Bello (<abbr>UNAB</abbr>)</td>
-                        <td>✓</td>
-                        <td>✓</td>
+                        <td>🟢</td>
+                        <td>🟢</td>
                     </tr>
                     <tr>
                         <th scope="row">1001-1200</th>
                         <td>Universidad Austral de Chile (<abbr>UACh</abbr>)</td>
-                        <td>✓</td>
-                        <td>✓</td>
+                        <td>🟢</td>
+                        <td>🟢</td>
                     </tr>
                     <tr>
                         <th scope="row">1001-1200</th>
                         <td>Universidad Técnica Federico Santa María (<abbr>UTFSM</abbr>)</td>
-                        <td>✓</td>
-                        <td>✗</td>
+                        <td>🟢</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">1201-1400</th>
                         <td>Universidad de la Frontera (<abbr>UFRO</abbr>)</td>
-                        <td>✗</td>
-                        <td>✗</td>
+                        <td>❌</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">1201-1400</th>
                         <td>Universidad de Talca</td>
-                        <td>✓</td>
-                        <td>✗</td>
+                        <td>🟢</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">1201-1400</th>
                         <td>Universidad del Desarrollo (<abbr>UDD</abbr>)</td>
-                        <td>✓</td>
-                        <td>✗</td>
+                        <td>🟢</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">1201-1400</th>
                         <td>Universidad Diego Portales (<abbr>UDP</abbr>)</td>
-                        <td>✓</td>
-                        <td>✓</td>
+                        <td>🟢</td>
+                        <td>🟢</td>
                     </tr>
                     <tr>
                         <th scope="row">1401+</th>
                         <td>Universidad Católica del Norte</td>
-                        <td>✗</td>
-                        <td>✗</td>
+                        <td>❌</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">1401+</th>
                         <td>Universidad de Tarapacá (<abbr>UTA</abbr>)</td>
-                        <td>✓</td>
-                        <td>✗</td>
+                        <td>🟢</td>
+                        <td>❌</td>
                     </tr>
                     <tr>
                         <th scope="row">1401+</th>
                         <td>Universidad de Valparaíso (<abbr>UV</abbr>)</td>
-                        <td>✓</td>
-                        <td>✗</td>
+                        <td>🟢</td>
+                        <td>❌</td>
                     </tr>
                 </tbody>
             </table>
@@ -456,11 +177,246 @@
                 institucional.
             </p>
 
-            <svg class="grafico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 580" role="img" aria-label="Espacio reservado para el gráfico interactivo de comparación">
-                <rect width="880" height="580" fill="silver" />
-                <text x="10" y="40">[Reemplazar por un gráfico interactivo como el trabajado en las clases 10 y 11.]</text>
-                <text x="10" y="70">Debe comparar cinco dimensiones de la PUC, la UCh y la UDD. Nada más.</text>
-            </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox= "0 0 880 580">
+    <rect width="1005" height="600" x="0" y="0" fill="#FFFFFF" id="background" />
+    <clipPath id="serieClipPath"><rect x="0" y="0" width="805" height="600" /></clipPath>
+    <g transform="translate(0,0)" clip-path="url(#serieClipPath)">
+        <g transform="translate(298, 315)">
+            <g id="axes">
+                <circle r="257" fill="none" stroke="LightGray" class="grid" id="90" />
+                <circle r="228" fill="none" stroke="LightGray" class="grid" id="80" />
+                <circle r="200" fill="none" stroke="LightGray" class="grid" id="70" />
+                <circle r="171" fill="none" stroke="LightGray" class="grid" id="60" />
+                <circle r="143" fill="none" stroke="LightGray" class="grid" id="50" />
+                <circle r="114" fill="none" stroke="LightGray" class="grid" id="40" />
+                <circle r="86" fill="none" stroke="LightGray" class="grid" id="30" />
+                <circle r="57" fill="none" stroke="LightGray" class="grid" id="20" />
+                <circle r="29" fill="none" stroke="LightGray" class="grid" id="10" />
+                <circle r="0" fill="none" stroke="LightGray" class="grid" id="0" />
+                <g>
+                    <line x1="0" y1="0" x2="1.7451216887849784e-14" y2="-285" stroke="black" />
+                    <text
+                        text-anchor="middle"
+                        dy="0.35em"
+                        x="1.806354028742346e-14"
+                        y="-295"
+                        font-family="Arial, sans-serif"
+                        font-size="12"
+                    >
+                        International Research Network Score
+                    </text>
+                </g>
+                <g>
+                    <line x1="0" y1="0" x2="271.05110714411876" y2="-88.06984339686001" stroke="black" />
+                    <text
+                        text-anchor="middle"
+                        dy="0.35em"
+                        x="280.5616723070703"
+                        y="-91.16001334060948"
+                        font-family="Arial, sans-serif"
+                        font-size="12"
+                    >
+                        Employer Reputation Score
+                    </text>
+                </g>
+                <g>
+                    <line x1="0" y1="0" x2="167.51879690335485" y2="230.56984339686002" stroke="black" />
+                    <text
+                        text-anchor="middle"
+                        dy="0.35em"
+                        x="173.39664942627957"
+                        y="238.6600133406095"
+                        font-family="Arial, sans-serif"
+                        font-size="12"
+                    >
+                        Faculty Student Score
+                    </text>
+                </g>
+                <g>
+                    <line x1="0" y1="0" x2="-167.51879690335483" y2="230.56984339686002" stroke="black" />
+                    <text
+                        text-anchor="middle"
+                        dy="0.35em"
+                        x="-173.39664942627954"
+                        y="238.6600133406095"
+                        font-family="Arial, sans-serif"
+                        font-size="12"
+                    >
+                        Citations per Faculty Score
+                    </text>
+                </g>
+                <g>
+                    <line x1="0" y1="0" x2="-271.05110714411876" y2="-88.06984339685998" stroke="black" />
+                    <text
+                        text-anchor="middle"
+                        dy="0.35em"
+                        x="-280.56167230707035"
+                        y="-91.16001334060945"
+                        font-family="Arial, sans-serif"
+                        font-size="12"
+                    >
+                        Academic Reputation Score
+                    </text>
+                </g>
+                <g
+                    id="y axis"
+                    fill="none"
+                    font-size="10"
+                    font-family="sans-serif"
+                    text-anchor="end"
+                    transform="translate(0, -285)"
+                >
+                    <path class="domain" stroke="currentColor" d="M-6,0H0V285H-6" />
+                    <g class="tick" opacity="1" transform="translate(0,24)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">90</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,53)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">80</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,82)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">70</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,111)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">60</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,140)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">50</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,169)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">40</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,198)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">30</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,227)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">20</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,256)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">10</text>
+                    </g>
+                    <g class="tick" opacity="1" transform="translate(0,285)">
+                        <line stroke="currentColor" x2="-6" />
+                        <text fill="currentColor" x="-9" dy="0.32em">0</text>
+                    </g>
+                </g>
+            </g>
+            <g id="radars">
+                <g id="0">
+                    <path
+                        d="M0,-73L48.504,-15.76L27.626,38.024L-5.878,8.09L-38.042,-12.361Z"
+                        stroke="#2ca02c"
+                        fill="#2ca02c"
+                        fill-opacity="0.5"
+                    />
+                    <g id="dots">
+                        <circle cx="4.469960816887839e-15" cy="-73" r="1" stroke="none" fill="#2ca02c" />
+                        <circle cx="48.50388233105283" cy="-15.759866713122317" r="1" stroke="none" fill="#2ca02c" />
+                        <circle cx="27.625906857746237" cy="38.02379873562253" r="1" stroke="none" fill="#2ca02c" />
+                        <circle cx="-5.87785252292473" cy="8.090169943749475" r="1" stroke="none" fill="#2ca02c" />
+                        <circle cx="-38.042260651806146" cy="-12.360679774997891" r="1" stroke="none" fill="#2ca02c" />
+                    </g>
+                </g>
+                <g id="1">
+                    <path
+                        d="M0,-219L231.107,-75.091L16.458,22.652L-27.038,37.215L-249.177,-80.962Z"
+                        stroke="#ff7f0e"
+                        fill="#ff7f0e"
+                        fill-opacity="0.5"
+                    />
+                    <g id="dots">
+                        <circle cx="1.3409882450663518e-14" cy="-219" r="1" stroke="none" fill="#ff7f0e" />
+                        <circle cx="231.1067334597223" cy="-75.09112963311222" r="1" stroke="none" fill="#ff7f0e" />
+                        <circle cx="16.457987064189247" cy="22.65247584249853" r="1" stroke="none" fill="#ff7f0e" />
+                        <circle cx="-27.03812160545376" cy="37.214781741247585" r="1" stroke="none" fill="#ff7f0e" />
+                        <circle cx="-249.17680726933025" cy="-80.96245252623619" r="1" stroke="none" fill="#ff7f0e" />
+                    </g>
+                </g>
+                <g id="2">
+                    <path
+                        d="M0,-227L261.541,-84.98L64.069,88.183L-21.748,29.934L-266.296,-86.525Z"
+                        stroke="#1f77b4"
+                        fill="#1f77b4"
+                        fill-opacity="0.5"
+                    />
+                    <g id="dots">
+                        <circle cx="1.3899741170322458e-14" cy="-227" r="1" stroke="none" fill="#1f77b4" />
+                        <circle cx="261.5405419811672" cy="-84.97967345311054" r="1" stroke="none" fill="#1f77b4" />
+                        <circle cx="64.06859249987957" cy="88.18285238686927" r="1" stroke="none" fill="#1f77b4" />
+                        <circle cx="-21.748054334821504" cy="29.933628791873055" r="1" stroke="none" fill="#1f77b4" />
+                        <circle cx="-266.295824562643" cy="-86.52475842498524" r="1" stroke="none" fill="#1f77b4" />
+                    </g>
+                </g>
+            </g>
+        </g>
+        <text
+            x="5"
+            y="5"
+            style="
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                fill: black;
+                font-weight: bold;
+                dominant-baseline: hanging;
+            "
+        />
+    </g>
+    <g id="grid"><rect x="0" y="0" width="805" height="600" fill="none" stroke="#ccc" /></g>
+    <g id="legend" transform="translate(805,30)">
+        <g transform="translate(5,0)">
+            <g class="legendColor" transform="translate(0,0)">
+                <g class="legendCells" transform="translate(0,16)">
+                    <g class="cell" transform="translate(0, 0)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(31, 119, 180)" />
+                        <text
+                            class="label"
+                            transform="translate( 20, 12.5)"
+                            font-family='"Arial", sans-serif'
+                            font-size="10px"
+                        >
+                            <tspan x="0" dy="0em">Pontificia Universidad</tspan>
+                            <tspan x="0" dy="1.2em">Católica de Chile (UC)</tspan>
+                        </text>
+                    </g>
+                    <g class="cell" transform="translate(0, 36.599998474121094)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(255, 127, 14)" />
+                        <text
+                            class="label"
+                            transform="translate( 20, 12.5)"
+                            font-family='"Arial", sans-serif'
+                            font-size="10px"
+                        >
+                            <tspan x="0" dy="0em">Universidad de Chile</tspan>
+                        </text>
+                    </g>
+                    <g class="cell" transform="translate(0, 57.599998474121094)">
+                        <rect class="swatch" height="15" width="15" style="fill: rgb(44, 160, 44)" />
+                        <text
+                            class="label"
+                            transform="translate( 20, 12.5)"
+                            font-family='"Arial", sans-serif'
+                            font-size="10px"
+                        >
+                            <tspan x="0" dy="0em">Universidad del Desarrollo</tspan>
+                            <tspan x="0" dy="1.2em">(UDD)</tspan>
+                        </text>
+                    </g>
+                </g>
+                <text class="legendTitle" font-family='"Arial", sans-serif' font-size="12px" font-weight="bold">
+                    <tspan x="0" dy="0em">Name</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
 
             <p>La comparación de las dimensiones <strong>[continuar texto]</strong></p>
 
@@ -640,75 +596,7 @@
         </script>
 
         <!-- Lo necesario para rellenar las tablas con su propio JSON publicado en myJSON (el mismo que pudo usar para la evaluación pasada) -->
-        <script>
-            const tbodyAmerica = document.querySelector("#america");
-            const tbodyEuropa = document.querySelector("#europa");
-            const tbodyOtros = document.querySelector("#otros");
-
-            const ENDPOINT = "https://api.myjson.online/v1/records/7798b850-599e-4a43-8570-bc9bb85a0c23";
-
-            const paisesAmerica = ["Argentina", "Brazil", "Canada", "Chile", "Colombia", "Mexico", "United States"];
-            const paisesEuropa = [
-                "Austria",
-                "Belgium",
-                "Czech Republic",
-                "Denmark",
-                "Estonia",
-                "Finland",
-                "France",
-                "Germany",
-                "Ireland",
-                "Italy",
-                "Netherlands",
-                "Sweden",
-                "Switzerland",
-                "United Kingdom",
-            ];
-
-            let htmlAmerica = "";
-            let htmlEuropa = "";
-            let htmlOtros = "";
-
-            var cuenta_america = 0;
-            var cuenta_europa = 0;
-            var cuenta_otros = 0;
-
-            fetch(ENDPOINT)
-                .then((respuesta) => {
-                    if (!respuesta.ok) {
-                        throw new Error("Error HTTP: " + respuesta.status);
-                    }
-                    return respuesta.json();
-                })
-                .then((datos) => {
-                    const escuelas = datos.data;
-
-                    escuelas.forEach((e) => {
-                        const esAmericana = paisesAmerica.some((pais) => e.location.includes(pais));
-                        const esEuropea = paisesEuropa.some((pais) => e.location.includes(pais));
-
-                        const pais = e.location.split(", ").pop();
-                        const fila = `<tr><th scope="row">${e.rank}</th><td>${e.name}</td><td>${pais}</td></tr>`;
-
-                        if (esAmericana) {
-                            htmlAmerica += fila;
-                            cuenta_america = cuenta_america + 1;
-                        } else if (esEuropea) {
-                            htmlEuropa += fila;
-                            cuenta_europa = cuenta_europa + 1;
-                        } else {
-                            htmlOtros += fila;
-                            cuenta_otros = cuenta_otros + 1;
-                        }
-                    });
-
-                    tbodyAmerica.innerHTML = htmlAmerica;
-                    tbodyEuropa.innerHTML = htmlEuropa;
-                    tbodyOtros.innerHTML = htmlOtros;
-                })
-                .catch((error) => {
-                    console.error("Algo salió mal:", error);
-                });
-        </script>
+        
+        <script src="script.js"></script>
     </body>
 </html>
