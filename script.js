@@ -1,1 +1,69 @@
 
+            const tbodyAmerica = document.querySelector("#america");
+            const tbodyEuropa = document.querySelector("#europa");
+            const tbodyOtros = document.querySelector("#otros");
+
+            const ENDPOINT = "https://api.myjson.online/v1/records/7798b850-599e-4a43-8570-bc9bb85a0c23";
+
+            const paisesAmerica = ["Argentina", "Brazil", "Canada", "Chile", "Colombia", "Mexico", "United States"];
+            const paisesEuropa = [
+                "Austria",
+                "Belgium",
+                "Czech Republic",
+                "Denmark",
+                "Estonia",
+                "Finland",
+                "France",
+                "Germany",
+                "Ireland",
+                "Italy",
+                "Netherlands",
+                "Sweden",
+                "Switzerland",
+                "United Kingdom",
+            ];
+
+            let htmlAmerica = "";
+            let htmlEuropa = "";
+            let htmlOtros = "";
+
+            var cuenta_america = 0;
+            var cuenta_europa = 0;
+            var cuenta_otros = 0;
+
+            fetch(ENDPOINT)
+                .then((respuesta) => {
+                    if (!respuesta.ok) {
+                        throw new Error("Error HTTP: " + respuesta.status);
+                    }
+                    return respuesta.json();
+                })
+                .then((datos) => {
+                    const escuelas = datos.data;
+
+                    escuelas.forEach((e) => {
+                        const esAmericana = paisesAmerica.some((pais) => e.location.includes(pais));
+                        const esEuropea = paisesEuropa.some((pais) => e.location.includes(pais));
+
+                        const pais = e.location.split(", ").pop();
+                        const fila = `<tr><th scope="row">${e.rank}</th><td>${e.name}</td><td>${pais}</td></tr>`;
+
+                        if (esAmericana) {
+                            htmlAmerica += fila;
+                            cuenta_america = cuenta_america + 1;
+                        } else if (esEuropea) {
+                            htmlEuropa += fila;
+                            cuenta_europa = cuenta_europa + 1;
+                        } else {
+                            htmlOtros += fila;
+                            cuenta_otros = cuenta_otros + 1;
+                        }
+                    });
+
+                    tbodyAmerica.innerHTML = htmlAmerica;
+                    tbodyEuropa.innerHTML = htmlEuropa;
+                    tbodyOtros.innerHTML = htmlOtros;
+                })
+                .catch((error) => {
+                    console.error("Algo salió mal:", error);
+                });
