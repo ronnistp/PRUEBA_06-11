@@ -1,1 +1,109 @@
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox= "0 0 805 600">
+    <rect width="805" height="600" x="0" y="0" fill="#FFFFFF" id="background" />
+    <g transform="translate(402.5,300)" id="viz">
+        <path
+            fill="#d62728"
+            display=""
+            d="M1,-287.998A288,288,0,0,1,279.661,68.802L140.919,34.157A145,145,0,0,0,1,-144.997Z"
+        >
+            <title>Americas</title>
+        </path>
+        <path
+            fill="#2ca02c"
+            display=""
+            d="M279.177,70.742A288,288,0,0,1,-271.626,95.725L-136.59,48.663A145,145,0,0,0,140.435,36.098Z"
+        >
+            <title>Europe</title>
+        </path>
+        <path
+            fill="#ff7f0e"
+            display=""
+            d="M-272.284,93.836A288,288,0,0,1,-160.295,-239.269L-81.116,-120.188A145,145,0,0,0,-137.249,46.774Z"
+        >
+            <title>Asia</title>
+        </path>
+        <path
+            fill="#1f77b4"
+            display=""
+            d="M-158.629,-240.376A288,288,0,0,1,-1,-287.998L-1,-144.997A145,145,0,0,0,-79.451,-121.296Z"
+        >
+            <title>Oceania</title>
+        </path>
+    </g>
+    <g id="labels" transform="translate(402.5,300)" text-anchor="middle">
+        <text transform="rotate(90) translate(72.5,0) rotate(180)">
+            <tspan
+                x="0"
+                y="4"
+                style="
+                    font-family: Arial, sans-serif;
+                    font-size: 10px;
+                    fill: black;
+                    font-weight: normal;
+                    font-style: italic;
+                "
+            />
+        </text>
+        <text transform="rotate(-37.98986157145642) translate(217.5,0) rotate(0)">
+            <tspan
+                x="0"
+                y="4"
+                style="
+                    font-family: Arial, sans-serif;
+                    font-size: 10px;
+                    fill: black;
+                    font-weight: normal;
+                    font-style: italic;
+                "
+            >
+                Americas
+            </tspan>
+        </text>
+        <text transform="rotate(87.40300253460711) translate(217.5,0) rotate(0)">
+            <tspan
+                x="0"
+                y="4"
+                style="
+                    font-family: Arial, sans-serif;
+                    font-size: 10px;
+                    fill: black;
+                    font-weight: normal;
+                    font-style: italic;
+                "
+            >
+                Europe
+            </tspan>
+        </text>
+        <text transform="rotate(198.58256970169623) translate(217.5,0) rotate(180)">
+            <tspan
+                x="0"
+                y="4"
+                style="
+                    font-family: Arial, sans-serif;
+                    font-size: 10px;
+                    fill: black;
+                    font-weight: normal;
+                    font-style: italic;
+                "
+            >
+                Asia
+            </tspan>
+        </text>
+        <text transform="rotate(253.18970559563274) translate(217.5,0) rotate(180)">
+            <tspan
+                x="0"
+                y="4"
+                style="
+                    font-family: Arial, sans-serif;
+                    font-size: 10px;
+                    fill: black;
+                    font-weight: normal;
+                    font-style: italic;
+                "
+            >
+                Oceania
+            </tspan>
+        </text>
+    </g>
+</svg>
